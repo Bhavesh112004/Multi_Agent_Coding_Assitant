@@ -1,0 +1,26 @@
+Build a "Carbon Emission Factor Calculator" with the following SPECIFICATIONS:
+
+1. FILE STRUCTURE:
+   - data/emission_factors.csv
+   - src/calculator.py
+   - src/__init__.py (Empty file)
+   - app.py
+   - requirements.txt
+
+2. DATA CONTRACT:
+   - The CSV must have headers: 'Activity_Type', 'Factor', and 'Unit'.
+   - Ensure 'Activity_Type' contains at least: 'Electricity', 'Petrol', 'Natural Gas'.
+
+3. LOGIC CONTRACT (src/calculator.py):
+   - Define 'def calculate_emissions(activity_type, quantity, df):'
+   - Inside the function, use df[df['Activity_Type'] == activity_type]['Factor'].values[0] to get the factor.
+   - Use .get() or try-except blocks to handle missing keys defensively.
+
+4. UI CONTRACT (app.py):
+   - Import specifically: 'from src.calculator import calculate_emissions'.
+   - Use 'st.selectbox' for Activity_Type.
+   - Use 'st.number_input' for quantity (ensure it is cast to float).
+   - The Gauge value MUST be a single float extracted from the calculation result.
+
+5. OUTPUT FORMAT:
+   - Use '--- FILE: path/filename ---' markers for all files.

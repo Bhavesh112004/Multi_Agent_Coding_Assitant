@@ -1,0 +1,21 @@
+# Security
+.env
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python overhead
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Agentic Outputs (Keep your code clean)
+Results/
+data/
+
+# System specific
+.DS_Store
+Thumbs.db

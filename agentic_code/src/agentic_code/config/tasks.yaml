@@ -1,0 +1,22 @@
+coding_task:
+  description: >
+    Analyze the problem statement: {topic}. 
+    1. Define the mathematical logic, algorithm, or data-flow required.
+    2. Identify the necessary Python libraries (e.g., pandas for data, 
+       scikit-learn for ML).
+    3. Plan a modular structure with a separate logic file in 'src/'.
+  expected_output: >
+    A technical design document outlining the algorithm and project structure.
+  agent: reviewer_agent
+
+review_task:
+  description: >
+    Execute the technical plan for {topic}.
+    1. Create 'src/__init__.py' to ensure package support.
+    2. Create 'src/engine.py' containing the core logic/functions.
+    3. Create 'app.py' using Streamlit to provide a professional UI.
+    4. Create 'requirements.txt' with all necessary dependencies.
+    ALL files must start with '--- FILE: path/filename ---'.
+  expected_output: >
+    The complete, extraction-ready source code for the entire project.
+  agent: coder_agent
