@@ -43,20 +43,20 @@ A professional, local-first agentic system powered by **CrewAI**, designed to au
 git clone [https://github.com/Bhavesh112004/Multi_Agent_Coding_Assitant.git](https://github.com/Bhavesh112004/Multi_Agent_Coding_Assitant.git)
 cd Multi_Agent_Coding_Assitant
 
-###2. Configure Environment: Initialize your local settings using the provided example:
+### 2. Configure Environment: Initialize your local settings using the provided example:
 ```bash
 cp .env.example .env
 
-###3. Install Dependencies:
+### 3. Install Dependencies:
 ```bash
 pip install -r requirements.txt
 
-###4. Local Model Setup: Ensure Ollama is running, then pull the required models:
+### 4. Local Model Setup: Ensure Ollama is running, then pull the required models:
 ```bash
 ollama pull qwen2.5-coder:7b
 ollama pull llama3.2
 
-###5. Run the Assistant:
+### 5. Run the Assistant:
 ```bash
 python main.py
 
