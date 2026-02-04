@@ -2,35 +2,44 @@
 
 A professional, local-first agentic system powered by **CrewAI**, designed to automate the software development lifecycle. By orchestrating specialized AI agents, this system researches technical requirements and generates production-ready code without relying on cloud APIs.
 
+---
 
-🚀 Key Features
-Local Intelligence: Runs entirely on Ollama, utilizing Qwen2.5-Coder (7B) for precise programming and Llama 3.2 for reasoning.
+## 🚀 Key Features
 
-Privacy-First: Zero data leaves your machine; no OpenAI or Anthropic API keys are required.
+* **Local Intelligence**: Runs entirely on **Ollama**, utilizing **Qwen2.5-Coder (7B)** for precise programming and **Llama 3.2** for reasoning.
+* **Privacy-First**: Zero data leaves your machine; no OpenAI or Anthropic API keys are required.
+* **Hardware Optimized**: Custom-tuned for **i5 processors** by disabling heavy OpenTelemetry (OTEL) tracing to maximize CPU efficiency.
+* **Modular Configuration**: Agent roles, goals, and backstories are decoupled into YAML files for easy customization.
+* **Traceable Results**: Automatically generates timestamped project folders in the `Results/` directory for every run.
 
-Hardware Optimized: Custom-tuned for i5 processors by disabling heavy OpenTelemetry (OTEL) tracing to maximize CPU efficiency.
+---
 
-Modular Configuration: Agent roles, goals, and backstories are decoupled into YAML files for easy customization.
+## 🛠️ Tech Stack
 
-Traceable Results: Automatically generates timestamped project folders in the Results/ directory for every run.
+| Component | Technology |
+| :--- | :--- |
+| **Framework** | CrewAI |
+| **Orchestration** | Ollama |
+| **Models** | Qwen2.5-Coder:7b & Llama 3.2 |
+| **Language** | Python 3.12+ |
+| **Package Manager** | UV |
+| **Environment** | Python-Dotenv |
 
-🛠️ Tech Stack
-Framework: CrewAI
+---
 
-Models: Qwen2.5-Coder:7b & Llama 3.2 (via Ollama)
+## 🧠 Agent Personas
 
-Language: Python 3.12+
+| Agent | Model | Primary Responsibility |
+| :--- | :--- | :--- |
+| **System Analyst** | `llama3.2` | Breaks down user prompts into technical tasks and research goals. |
+| **Senior Developer** | `qwen2.5-coder:7b` | Writes clean, PEP8-compliant Python code based on analyst research. |
 
-Package Manager: UV
+---
 
-Environment: Python-Dotenv
+## 📦 Installation & Setup
 
-🧠 Agent PersonasAgentModelPrimary ResponsibilitySystem Analystllama3.2Breaks down user prompts into technical tasks and research goals.Senior Developerqwen2.5-coder:7bWrites clean, PEP8-compliant Python code based on analyst research.
-
-📦 Installation & Setup
-1. Clone the Repository:
-
-Bash
+### 1. Clone the Repository
+```bash
 git clone [https://github.com/Bhavesh112004/Multi_Agent_Coding_Assitant.git](https://github.com/Bhavesh112004/Multi_Agent_Coding_Assitant.git)
 cd Multi_Agent_Coding_Assitant
 
