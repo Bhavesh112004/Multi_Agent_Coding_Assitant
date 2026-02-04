@@ -2,22 +2,6 @@
 
 A professional, local-first agentic system powered by **CrewAI**, designed to automate the software development lifecycle. By orchestrating specialized AI agents, this system researches technical requirements and generates production-ready code without relying on cloud APIs.
 
-## 📊 System Architecture
-
-This project utilizes a **Hierarchical Agentic Workflow** to ensure high-quality code generation through collaboration.
-
-```mermaid
-graph TD
-    A[User Requirement] --> B[Task Analyst: Llama 3.2]
-    B --> C[Senior Developer: Qwen 2.5]
-    C --> D[QA Reviewer: Local Logic]
-    D -->|Refinement| C
-    D --> E[Final Result: Results/ Folder]
-    
-    subgraph "Local Infrastructure (Ollama)"
-    B
-    C
-    end
 
 🚀 Key Features
 Local Intelligence: Runs entirely on Ollama, utilizing Qwen2.5-Coder (7B) for precise programming and Llama 3.2 for reasoning.
